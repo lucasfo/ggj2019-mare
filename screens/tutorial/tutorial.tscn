@@ -1,0 +1,217 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://screens/tutorial/tutorial.gd" type="Script" id=1]
+[ext_resource path="res://screens/tutorial/tutorial1.png" type="Texture" id=2]
+[ext_resource path="res://objects/material/mat1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://objects/material/mat2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://objects/material/mat3.tscn" type="PackedScene" id=5]
+[ext_resource path="res://screens/game/hud/ballon/ballon.tscn" type="PackedScene" id=6]
+[ext_resource path="res://objects/home/spr_casa_5.png" type="Texture" id=7]
+[ext_resource path="res://objects/anim/anim.tscn" type="PackedScene" id=8]
+[ext_resource path="res://screens/game/hud/ballon/hud_seta_direita_4.png" type="Texture" id=9]
+[ext_resource path="res://screens/game/hud/ballon/hud_seta_esquerda_4.png" type="Texture" id=10]
+[ext_resource path="res://screens/game/hud/ballon/hud_seta_cima_4.png" type="Texture" id=11]
+[ext_resource path="res://screens/game/hud/ballon/hud_seta_baixo_4.png" type="Texture" id=12]
+[ext_resource path="res://screens/tutorial/tutorial2.png" type="Texture" id=13]
+[ext_resource path="res://objects/wall/spr_tampinha_barreira_9.png" type="Texture" id=14]
+
+[node name="tutorial" type="Node2D"]
+
+scale = Vector2( 2, 2 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="frame1" type="Sprite" parent="." index="0"]
+
+scale = Vector2( 1, 1.17039 )
+texture = ExtResource( 2 )
+centered = false
+_sections_unfolded = [ "Transform" ]
+
+[node name="Material1" parent="frame1" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 50.4462, 125.52 )
+
+[node name="Material2" parent="frame1" index="1" instance=ExtResource( 4 )]
+
+position = Vector2( 38.5298, 144.586 )
+
+[node name="Material3" parent="frame1" index="2" instance=ExtResource( 5 )]
+
+position = Vector2( 21.8468, 124.725 )
+
+[node name="ballon" parent="frame1" index="3" instance=ExtResource( 6 )]
+
+position = Vector2( 46.4741, 98.5091 )
+_sections_unfolded = [ "Pause", "Transform", "Z Index" ]
+
+[node name="home" type="Sprite" parent="frame1" index="4"]
+
+position = Vector2( 43.6936, 49.2546 )
+texture = ExtResource( 7 )
+hframes = 5
+_sections_unfolded = [ "Animation" ]
+
+[node name="player" parent="frame1" index="5" instance=ExtResource( 8 )]
+
+position = Vector2( 62.7599, 81.0318 )
+once = false
+reverse = false
+
+[node name="ballon1" parent="frame1" index="6" instance=ExtResource( 8 )]
+
+position = Vector2( 14.6969, 108.44 )
+texture = ExtResource( 9 )
+hframes = 4
+once = false
+reverse = false
+animSize = 4
+
+[node name="ballon2" parent="frame1" index="7" instance=ExtResource( 8 )]
+
+position = Vector2( 33.7632, 108.44 )
+texture = ExtResource( 10 )
+hframes = 4
+once = false
+reverse = false
+animSize = 4
+
+[node name="ballon3" parent="frame1" index="8" instance=ExtResource( 8 )]
+
+position = Vector2( 67.1293, 109.631 )
+texture = ExtResource( 11 )
+hframes = 4
+once = false
+reverse = false
+animSize = 4
+
+[node name="ballon4" parent="frame1" index="9" instance=ExtResource( 8 )]
+
+position = Vector2( 49.6518, 107.645 )
+texture = ExtResource( 12 )
+hframes = 4
+once = false
+reverse = false
+animSize = 4
+
+[node name="frame2" type="Sprite" parent="." index="1"]
+
+editor/display_folded = true
+visible = false
+scale = Vector2( 1, 1.16433 )
+texture = ExtResource( 13 )
+centered = false
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Material" parent="frame2" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 46.4741, 40.1186 )
+
+[node name="Material2" parent="frame2" index="1" instance=ExtResource( 4 )]
+
+position = Vector2( 34.5577, 59.185 )
+
+[node name="Material3" parent="frame2" index="2" instance=ExtResource( 5 )]
+
+position = Vector2( 17.8746, 39.3242 )
+
+[node name="build1" type="Sprite" parent="frame2" index="3"]
+
+position = Vector2( 56.8017, 98.9064 )
+texture = ExtResource( 14 )
+hframes = 9
+frame = 2
+_sections_unfolded = [ "Animation" ]
+
+[node name="build2" type="Sprite" parent="frame2" index="4"]
+
+position = Vector2( 40.5159, 98.5092 )
+texture = ExtResource( 14 )
+hframes = 9
+frame = 1
+_sections_unfolded = [ "Animation" ]
+
+[node name="build3" type="Sprite" parent="frame2" index="5"]
+
+position = Vector2( 24.2301, 98.9064 )
+texture = ExtResource( 14 )
+hframes = 9
+_sections_unfolded = [ "Animation" ]
+
+[node name="evo1" type="Sprite" parent="frame2" index="6"]
+
+position = Vector2( 23.4357, 137.436 )
+texture = ExtResource( 14 )
+hframes = 9
+frame = 2
+_sections_unfolded = [ "Animation" ]
+
+[node name="evo2" type="Sprite" parent="frame2" index="7"]
+
+position = Vector2( 39.7215, 137.833 )
+texture = ExtResource( 14 )
+hframes = 9
+frame = 5
+_sections_unfolded = [ "Animation" ]
+
+[node name="evo3" type="Sprite" parent="frame2" index="8"]
+
+position = Vector2( 57.5961, 138.628 )
+texture = ExtResource( 14 )
+hframes = 9
+frame = 8
+_sections_unfolded = [ "Animation" ]
+
+[node name="back" type="Button" parent="." index="2"]
+
+show_behind_parent = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 6.0
+margin_top = 4.0
+margin_right = 60.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+_sections_unfolded = [ "Visibility" ]
+
+[node name="flip" type="Button" parent="." index="3"]
+
+show_behind_parent = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 99.0
+margin_top = 188.0
+margin_right = 153.0
+margin_bottom = 208.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+_sections_unfolded = [ "Grow Direction", "Margin" ]
+
+

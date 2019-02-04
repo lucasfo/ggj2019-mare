@@ -1,0 +1,103 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://screens/game/game.gd" type="Script" id=1]
+[ext_resource path="res://objects/wave/wave.tscn" type="PackedScene" id=2]
+[ext_resource path="res://screens/leaderboard/leaderboard.tscn" type="PackedScene" id=3]
+[ext_resource path="res://objects/map/map.tscn" type="PackedScene" id=4]
+[ext_resource path="res://objects/player/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://screens/game/hud/hud_barra.png" type="Texture" id=6]
+[ext_resource path="res://screens/game/hud/hud_onda.png" type="Texture" id=7]
+[ext_resource path="res://screens/game/hud/hud_casa.png" type="Texture" id=8]
+[ext_resource path="res://screens/game/hud/inventory/inventory.tscn" type="PackedScene" id=9]
+[ext_resource path="res://fonts/04B_03__.TTF" type="DynamicFontData" id=10]
+[ext_resource path="res://screens/game/hud/ballon/ballon.tscn" type="PackedScene" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 18
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 10 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="GameManager" type="Node2D"]
+
+scale = Vector2( 2, 2 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+offset = Vector2( 32, 0 )
+Wave = ExtResource( 2 )
+Leaderboard = ExtResource( 3 )
+
+[node name="map" parent="." index="0" instance=ExtResource( 4 )]
+
+z_as_relative = false
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Player" parent="." index="1" instance=ExtResource( 5 )]
+
+_sections_unfolded = [ "Pause", "Z Index" ]
+
+[node name="bar" type="Sprite" parent="." index="2"]
+
+position = Vector2( 224, 112 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="waveHud" type="Sprite" parent="." index="3"]
+
+position = Vector2( 224, 32 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="homeHud" type="Sprite" parent="." index="4"]
+
+position = Vector2( 224, 192 )
+texture = ExtResource( 8 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="inventory" parent="." index="5" instance=ExtResource( 9 )]
+
+position = Vector2( 224, 208 )
+
+[node name="scoreLabel" type="Label" parent="." index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect" ]
+
+[node name="up" parent="." index="7" instance=ExtResource( 11 )]
+
+position = Vector2( 104, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="right" parent="." index="8" instance=ExtResource( 11 )]
+
+position = Vector2( 224, 112 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="down" parent="." index="9" instance=ExtResource( 11 )]
+
+position = Vector2( 104, 208 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="left" parent="." index="10" instance=ExtResource( 11 )]
+
+position = Vector2( -16, 112 )
+_sections_unfolded = [ "Transform" ]
+
+

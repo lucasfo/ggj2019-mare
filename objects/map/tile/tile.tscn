@@ -1,0 +1,61 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://objects/map/tile/tile.gd" type="Script" id=1]
+[ext_resource path="res://objects/material/mat1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://objects/material/mat2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://objects/material/mat3.tscn" type="PackedScene" id=4]
+[ext_resource path="res://objects/wall/wall1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://objects/wall/wall2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://objects/wall/wall3.tscn" type="PackedScene" id=7]
+[ext_resource path="res://objects/map/tile/tile_praia.png" type="Texture" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 8, 8 )
+
+[node name="tile" type="Area2D"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Animation" ]
+border = 1
+isFree = true
+color = null
+parent = null
+contType = null
+indexes = Vector2( -1, -1 )
+matChance = 0.3
+Mat1 = ExtResource( 2 )
+Mat2 = ExtResource( 3 )
+Mat3 = ExtResource( 4 )
+buildable = false
+side = null
+Wall1 = ExtResource( 5 )
+Wall2 = ExtResource( 6 )
+Wall3 = ExtResource( 7 )
+animSpeed = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+
+position = Vector2( 8, 8 )
+z_index = 11
+z_as_relative = false
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Sprite" type="Sprite" parent="." index="1"]
+
+texture = ExtResource( 8 )
+centered = false
+vframes = 8
+hframes = 8
+_sections_unfolded = [ "Animation", "Offset", "Region" ]
+
+

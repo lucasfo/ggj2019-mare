@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://screens/game/hud/ballon/ballon.gd" type="Script" id=1]
+[ext_resource path="res://objects/anim/anim.tscn" type="PackedScene" id=2]
+[ext_resource path="res://screens/game/hud/ballon/hud_seta_cima_4.png" type="Texture" id=3]
+[ext_resource path="res://screens/game/hud/ballon/hud_seta_esquerda_4.png" type="Texture" id=4]
+[ext_resource path="res://screens/game/hud/ballon/hud_seta_baixo_4.png" type="Texture" id=5]
+[ext_resource path="res://screens/game/hud/ballon/hud_seta_direita_4.png" type="Texture" id=6]
+[ext_resource path="res://screens/game/hud/ballon/hud_numeros_9.png" type="Texture" id=7]
+
+[node name="ballon" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="up" parent="." index="0" instance=ExtResource( 2 )]
+
+visible = false
+texture = ExtResource( 3 )
+centered = false
+hframes = 4
+once = false
+reverse = false
+animSize = 4
+
+[node name="left" parent="." index="1" instance=ExtResource( 2 )]
+
+visible = false
+texture = ExtResource( 4 )
+centered = false
+hframes = 4
+once = false
+reverse = false
+animSize = 4
+
+[node name="down" parent="." index="2" instance=ExtResource( 2 )]
+
+visible = false
+texture = ExtResource( 5 )
+centered = false
+hframes = 4
+once = false
+reverse = false
+animSize = 4
+
+[node name="right" parent="." index="3" instance=ExtResource( 2 )]
+
+visible = false
+texture = ExtResource( 6 )
+centered = false
+hframes = 4
+once = false
+reverse = false
+animSize = 4
+
+[node name="num" type="Sprite" parent="." index="4"]
+
+visible = false
+texture = ExtResource( 7 )
+centered = false
+hframes = 9
+_sections_unfolded = [ "Animation", "Transform" ]
+
+

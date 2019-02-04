@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/HawaiiMusic-Loop.ogg-92ab2e7719ee432428705dbe7e44011a.oggstr"
+
+[deps]
+
+source_file="res://audio/HawaiiMusic-Loop.ogg"
+dest_files=[ "res://.import/HawaiiMusic-Loop.ogg-92ab2e7719ee432428705dbe7e44011a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
